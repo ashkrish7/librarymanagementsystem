@@ -1,7 +1,7 @@
 Please go through these important points before using/running the code or making changes:
     
-    1. The username and password for the librarian in the login window (login.py), have been set as "arshwini" and "rk" respectively. 
-        If you wish to change the login credentials (the username and password for the librarian), you can change them in the 13th line in login.py.
+    1. The username and password for the librarian in the login window (main.py), have been set as "arshwini" and "rk" respectively. 
+        If you wish to change the login credentials (the username and password for the librarian), you can change them in the 13th line in main.py.
     
     2. To copy the mysql database in the database folder, do the following:
         1. Create a new database in mysql.
@@ -11,7 +11,13 @@ Please go through these important points before using/running the code or making
             For example: source e:\library\database\database.sql
             (Here, the drive is the drive in which the database folder is saved followed by the full path name of the database file with extension .sql)
         4. You will have the database ready in mysql that I have used without having to make one again.
-        5. REMEMBER to 
+        5. You can check if the database has been copied by giving the following commands in mysql:
+            1. show tables; 
+               #This shows the tables that exist in the database - books, status, and users.
+            2. select * from books; (To view records in the books table)
+            3. select * from status; (To view records in the status table)
+            4. select * from users; (To view records in the users table)
+        5. REMEMBER to:
                 1. Change the database name and password in the mysql connect function.
-                2. Write your database name that you created above to copy the tables in place of 'databasename' and give your mysql password in place of 'yourpassword' in the mysql connect function in the 12th line in command.py)
+                2. Write the database name that you created above in place of 'databasename' and give your mysql password in place of 'yourpassword' in the mysql connect function in the 11th line in commands.py)
 

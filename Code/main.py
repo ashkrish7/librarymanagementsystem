@@ -1,9 +1,9 @@
 #Om Gam Ganapataye Namah
 import tkinter
 import importlib
-import mainwindow
+import newwindow
 from tkinter import messagebox
-import command
+import commands
 
 mainwindow = importlib.import_module('mainwindow')
 def check():

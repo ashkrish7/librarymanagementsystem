@@ -1,7 +1,7 @@
 #RADHEKRISHNA
 import tkinter
 import datetime as dt
-import command
+import commands
 
 def main():
     global i
@@ -21,17 +21,17 @@ def main():
     l.place(x=0,y=0)
     T1="""  Search  
   Book  """
-    btn=tkinter.Button(w,text=T1,command=command.search,font=("Octin Vintage B R", 20,"bold"),relief="raised",borderwidth=5,fg="Black",bg="#FFD700")
+    btn=tkinter.Button(w,text=T1,command=commands.search,font=("Octin Vintage B R", 20,"bold"),relief="raised",borderwidth=5,fg="Black",bg="#FFD700")
     btn.place(x=95,y=180)
     tid = tkinter.Label(w, text=f"{dt.datetime.now():%a, %b %d %Y}", fg="white", bg="black", font=("Georgia", 25),relief="raised",borderwidth=9)#helvetica
     tid.place(x=640,y=744)
     T="""Issue / Return
 Book"""
-    b=tkinter.Button(w,text=T,command=command.issueorreturn,font=("Octin Vintage B R", 20,"bold"),relief="raised",borderwidth=5,fg="Black",bg="#FFD700")
+    b=tkinter.Button(w,text=T,command=commands.issueorreturn,font=("Octin Vintage B R", 20,"bold"),relief="raised",borderwidth=5,fg="Black",bg="#FFD700")
     b.place(x=60,y=400)
     T2="""  Show  
   Status  """
-    b=tkinter.Button(w,text=T2,command=command.status,font=("Octin Vintage B R", 20,"bold"),relief="raised",borderwidth=5,fg="Black",bg="#FFD700")
+    b=tkinter.Button(w,text=T2,command=commands.status,font=("Octin Vintage B R", 20,"bold"),relief="raised",borderwidth=5,fg="Black",bg="#FFD700")
     b.place(x=95,y=630)
     I=tkinter.PhotoImage(file="bookshelf.png")
     tc = tkinter.ttk.Notebook(width=600,height=600)

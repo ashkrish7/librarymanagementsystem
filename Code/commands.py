@@ -1,5 +1,4 @@
 #Om Gam Ganapataye Namah
-#Om Namah Parvati Pataye Hara Hara Mahadeva
 
 import tkinter
 from tkinter.ttk import *
