@@ -8,14 +8,14 @@ import mysql.connector as sql
 from tkinter import messagebox
 from tkinter import ttk
 
-mydb=sql.connect(user="root",host="localhost",password="yourpassword",database="databasename")
+mydb=sql.connect(user="root",host="localhost",password="yourmysqlpassword",database="databasename")
 cursor= mydb.cursor()
 def search():   
     global I,Im, Img
     m = tkinter.Tk()
     m.geometry("600x670")
     m.title("Library Management System")
-    m.iconbitmap('Icon.ico')
+    m.iconbitmap('assets\LMS_Icon.ico')
     m.resizable(0, 0)
     
     
@@ -31,15 +31,15 @@ def search():
     tc.add(t2, text ='Add New Book')
     tc.add(t3, text ="Delete Book")
     tc.place(x=0,y=70)
-    I=tkinter.PhotoImage(master=tc,file="bookshelf.png")
+    I=tkinter.PhotoImage(master=tc,file="assets\\bookshelf.png")
     canvas=tkinter.Canvas(t1,width=600,height=600)
     canvas.place(x=0,y=0)
     canvas.create_image(1,1,image=I,anchor="nw")
-    Im=tkinter.PhotoImage(master=tc,file="bs2.png")
+    Im=tkinter.PhotoImage(master=tc,file="assets\\bookshelf2.png")
     canvas=tkinter.Canvas(t2,width=600,height=600)
     canvas.place(x=0,y=0)
     canvas.create_image(1,1,image=Im,anchor="nw")
-    Img=tkinter.PhotoImage(master=tc,file="t3.png")
+    Img=tkinter.PhotoImage(master=tc,file="assets\\bookshelf3.png")
     canvas=tkinter.Canvas(t3,width=600,height=600)
     canvas.place(x=0,y=0)
     canvas.create_image(1,1,image=Img,anchor="nw")
@@ -234,9 +234,9 @@ def issueorreturn():
     t = tkinter.Tk()
     t.title("Library Management System")
     t.geometry("1198x651")
-    t.iconbitmap('Icon.ico')
+    t.iconbitmap('assets\LMS_Icon.ico')
     t.resizable(0, 0)
-    ima=tkinter.PhotoImage(master=t,file="room2.png")
+    ima=tkinter.PhotoImage(master=t,file="assets\Library2.png")
     canvas=tkinter.Canvas(t,width=1198,height=591)
     canvas.place(x=0,y=70)
     canvas.create_image(1,1,image=ima,anchor="nw")
@@ -383,7 +383,7 @@ def issueorreturn():
     Le2.place(x= 838,y=307)
     Le2['values'] = Booklist
     rbtn=tkinter.Button(t,text=" Return Now ",font=("Octin Vintage B R", 15,"bold"),relief="raised",borderwidth=5,fg="Black",bg="#FFD700")
-    rbtn.place(x=815,y=560)
+    rbtn.place(x=805,y=560)
 
     
     
@@ -406,7 +406,9 @@ def issueorreturn():
                     messagebox.showerror('ERROR','Transaction not commit')
             elif(us== '' or stat==''):
                 messagebox.showerror('ERROR','Blank Values not accepted!')
-        global Le1,rbtn
+            else:
+                messagebox.showerror('ERROR','Blank Values not accepted!')    
+        global Le1,rbtn,Le2
         Le1 = ttk.Combobox(t,textvariable=USERname,width=40)
         us = Le1.get()
         cursor.execute("SELECT BOOK_NO FROM status WHERE ID_NO=%s",(us,))
@@ -417,7 +419,7 @@ def issueorreturn():
         
         Bname = tkinter.StringVar()
         Le2 = ttk.Combobox(t, textvariable=Bname,width=40)
-        Le2.place(x= 889,y=310)
+        Le2.place(x= 838,y=307)
         Le2['values'] = Booklist
         rbtn=tkinter.Button(t,text=" Return Now ",command=rn,font=("Octin Vintage B R", 15,"bold"),relief="raised",borderwidth=5,fg="Black",bg="#FFD700")
         rbtn.place(x=805,y=560)
@@ -430,9 +432,9 @@ def status():
     s = tkinter.Tk()
     s.title("Library Management System")
     s.geometry("1198x652")
-    s.iconbitmap('Icon.ico')
+    s.iconbitmap('assets\LMS_Icon.ico')
     s.resizable(0, 0)
-    Ma=tkinter.PhotoImage(master=s,file="rroom.png")
+    Ma=tkinter.PhotoImage(master=s,file="assets\Library3.png")
     canvas=tkinter.Canvas(s,width=1198,height=592)
     canvas.place(x=0,y=70)
     canvas.create_image(1,1,image=Ma,anchor="nw")
