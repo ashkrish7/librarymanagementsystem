@@ -19,5 +19,5 @@ Please go through these important points before using/running the code or making
             4. select * from users; (To view records in the users table)
         5. REMEMBER to:
                 1. Change the database name and password in the mysql connect function.
-                2. Write the database name that you created above in place of 'databasename' and give your mysql password in place of 'yourpassword' in the mysql connect function in the 11th line in commands.py)
+                2. Write the database name that you created above in place of 'databasename' and give your mysql password in place of 'yourmsqlpassword' in the mysql connect function in the 11th line in commands.py)
 
