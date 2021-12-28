@@ -9,10 +9,10 @@ def main():
     w.geometry("300x200")
     w.configure(bg="Yellow")
     w.title("Library Management System")
-    w.iconbitmap('Icon.ico')
+    w.iconbitmap('assets\LMS_Icon.ico')
     w.resizable(0, 0)
     
-    i=tkinter.PhotoImage(file="HogwartsLibrarycopy.png")
+    i=tkinter.PhotoImage(file="assets\HogwartsLibrary.png")
     wid = i.width()
     h = i.height()
     w.geometry("%dx%d" % (wid, h))
@@ -33,12 +33,12 @@ Book"""
   Status  """
     b=tkinter.Button(w,text=T2,command=commands.status,font=("Octin Vintage B R", 20,"bold"),relief="raised",borderwidth=5,fg="Black",bg="#FFD700")
     b.place(x=95,y=630)
-    I=tkinter.PhotoImage(file="bookshelf.png")
+    I=tkinter.PhotoImage(file="assets\\bookshelf.png")
     tc = tkinter.ttk.Notebook(width=600,height=600)
-    Im=tkinter.PhotoImage(master=tc,file="bs2.png")
-    Img=tkinter.PhotoImage(master=tc,file="t3.png")
-    ima=tkinter.PhotoImage(file="room2.png")
-    Ma=tkinter.PhotoImage(file="rroom.png")
+    Im=tkinter.PhotoImage(master=tc,file="assets\\bookshelf2.png")
+    Img=tkinter.PhotoImage(master=tc,file="assets\\bookshelf3.png")
+    ima=tkinter.PhotoImage(file="assets\Library2.png")
+    Ma=tkinter.PhotoImage(file="assets\Library3.png")
     txt=""" ABOUT
 
 The Library
